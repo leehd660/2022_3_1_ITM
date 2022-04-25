@@ -58,7 +58,7 @@ public class SimpleShell {
                 try {
                     int index = Integer.parseInt(cmdList.get(1));
                     historyList.add(commandLine);
-                    if (index <= 0) {
+                    if (index < 0) {
                         System.out.println("error : your input value of Integer is smaller than history size.");
                     }
                     else if (index > historyList.size()+1) {
@@ -111,7 +111,7 @@ public class SimpleShell {
 
         // function of 'cd'
         else if (cmdList.get(0).equals("cd")) {
-            // cd로 시작하는 명령어는 전부 들어감
+            // cd로 시작하는 명령어는 전부 들어감(에러난 코드여도)
             historyList.add(commandLine);
             if (cmdList.size() == 1) {
                 nowPath = absPath;
