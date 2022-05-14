@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>number 3</title>
+    </head>
+    <body>
+        <script>
+            function getRandom(max) {
+                return Math.floor(Math.random() * max);
+            }
+
+            for (var count = 0; count < 5; count++) {
+                var randomNumber = getRandom(101);
+                // document.write(randomNumber + "\n");
+                if (randomNumber < 50) {
+                    alert("Hey, " + randomNumber + " is less than 50.");
+                } else {
+                    alert(
+                        "Yo, " +
+                            randomNumber +
+                            " is greater than or equal to 50."
+                    );
+                }
+            }
+        </script>
+    </body>
+</html>

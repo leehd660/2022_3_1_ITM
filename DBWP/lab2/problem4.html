@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>number 4</title>
+    </head>
+    <body>
+        <script>
+            function Add() {
+                num1 = window.document.form01.input01.value;
+                num2 = window.document.form01.input03.value;
+                window.document.form01.input02.value = "+";
+                window.document.form01.input04.value =
+                    Number(num1) + Number(num2);
+            }
+            function Subtract() {
+                num1 = window.document.form01.input01.value;
+                num2 = window.document.form01.input03.value;
+                window.document.form01.input02.value = "-";
+                window.document.form01.input04.value =
+                    Number(num1) - Number(num2);
+            }
+            function Multiply() {
+                num1 = window.document.form01.input01.value;
+                num2 = window.document.form01.input03.value;
+                window.document.form01.input02.value = "*";
+                window.document.form01.input04.value =
+                    Number(num1) * Number(num2);
+            }
+            function Divide() {
+                num1 = window.document.form01.input01.value;
+                num2 = window.document.form01.input03.value;
+                window.document.form01.input02.value = "/";
+                window.document.form01.input04.value =
+                    Number(num1) / Number(num2);
+            }
+        </script>
+        <form name="form01">
+            <input type="text" name="input01" size="5" />
+            <input type="text" name="input02" size="1" />
+            <input type="text" name="input03" size="5" />
+            <input type="text" name="input04" size="5" /> <br />
+            <input type="button" onclick="Add()" value="Add" />
+            <input type="button" onclick="Subtract()" value="Subtract" />
+            <input type="button" onclick="Multiply()" value="Multiply" />
+            <input type="button" onclick="Divide()" value="Divide" />
+        </form>
+    </body>
+</html>
